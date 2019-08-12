@@ -28,6 +28,14 @@ class UtcDateType extends DateType
     /**
      * {@inheritdoc}
      */
+    public function getName()
+    {
+        return 'utc_date';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function convertToDatabaseValue($date, AbstractPlatform $platform): ?string
     {
         if (null === $date) {
